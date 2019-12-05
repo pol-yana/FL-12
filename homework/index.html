@@ -12,8 +12,10 @@
     <div id="main">
       <div id="container">
         <div id="content" role="main">
+          <header>
           <img src="logo.png" alt="Epam" />
           <h1>HTML Elements</h1>
+        </header>
           <hr>
           <nav>
             <a href="#">Home</a>
@@ -35,7 +37,7 @@
             = 256.
             Phosphoric acid is H<sub>3</sub>PO<sup>4</sup>.
             Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.
-            <q>Time Magazine</q>
+            <i>Time Magazine</i>
             (That’s a citation).
             <u>Underline.</u>
             Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem,
@@ -110,14 +112,73 @@ both      <b>spaces</b>
             </ol>
             <li>Enjoy your day </li>
           </ol>
-          Definition List HTML HTML is the standard markup language to create Web
-          pages. CSS CSS describes how HTML elements are to be displayed. JavaScript JavaScript is a scripting
-          languages, primarily used on the Web. Select for learning JS HTML CSS Table Skill Training City JAVA JAVA
-          development training Lviv JAVASCRIPT FRONT-END development Kharkiv IOS IOS winter 2019 Kyiv DEVOPS DEVOPS
-          spring 2020 Dnipro Blockquotes Let’s keep it simple. Italics are good to help set it off from the body
-          text. Be sure to style the citation. "So if you want to go fast, if you want to get done quickly, if you want
-          your code to be easy to write, make
-          it easy to read." Robert C. Martin (Uncle Bob) Username: Email: Password: Submit � Copyright Epam Systems
+          <h3>Definition List</h3>
+          <dl>
+            <dt>HTML</dt>
+            <dd> HTML is the standard markup language to create Web pages.</dd>
+            <dt>CSS</dt>
+            <dd> CSS describes how HTML elements are to be displayed.</dd>
+            <dt>JavaScript</dt>
+            <dd> JavaScript is a scripting languages, primarily used on the Web.</dd>
+          </dl>
+          <p>Select for learning </p>
+          <select>
+            <option>JS</option>
+            <option>HTML</option>
+            <option>CSS</option>
+          </select>
+          <hr>
+          <hr>
+          <h2>Table</h2>
+          <table>
+            <theader>
+              <tr>
+                <th>Skill</th>
+                <th>Training</th>
+                <th>City</th>
+              </tr>
+            </theader>
+            <tbody>
+              <tr>
+                <td>JAVA</td>
+                <td>JAVA development training</td>
+                <td>Lviv</td>
+              </tr>
+              <tr>
+                <td>JAVASCRIPT</td>
+                <td>FRONT-END development</td>
+                <td>Kharkiv</td>
+              </tr>
+              <tr>
+                <td>IOS</td>
+                <td>IOS winter 2019</td>
+                <td>Kyiv</td>
+              </tr>
+              <tr>
+                <td>DEVOPS</td>
+                <td>DEVOPS spring 2020</td>
+                <td>Dnipro</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>Blockquotes</h2>
+          <p>Let’s keep it simple. Italics are good to help set it off from the body
+            text. Be sure to style the citation.</p>
+          <i>
+            <blockquote>"So if you want to go fast, if you want to get done quickly, if you want your code to be easy
+              to write, make it easy to read."<br>
+              <a href="#">Robert C. Martin (Uncle Bob)</a></blockquote>
+          </i>
+          <hr>
+          <form>
+            Username:<input type="text" name="Username" value=""><br>
+            Email:<input type="email" name="Email" value=""><br>
+            Password:<input type="password" name="Password" value=""><br>
+            <textarea rows="5" cols="23" name="text"></textarea><br>
+            <button style="border-radius: 5px;">Submit</button><br>
+          </form>
+          <footer>&copy Copyright Epam Systems</footer>
+          
         </div>
       </div>
     </div>
