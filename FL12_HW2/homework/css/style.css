@@ -1,0 +1,45 @@
+.tm-nav-item:hover{
+    background-color: lightskyblue;
+}
+
+.tm-nav-item-link:hover{
+    color:#fff;
+}
+
+.tm-banner {
+    background-image: linear-gradient(90deg, lightskyblue, burlywood);
+}
+
+.tm-banner-inner{
+    background-color: #fff;
+}
+
+.tm-banner-text{
+    text-shadow:2px 3px 4px #333;
+    animation: 3s linear 0s infinite move_text;
+}
+
+@keyframes move_text { from { margin-left:200px;} to {center} }
+
+.tm-team-img{
+    position: relative;
+    float:right;
+}
+
+.tm-team-description-container{
+    position: relative;
+    float:left;
+}
+
+.tm-section-description{
+    text-indent: 25px;
+}
+.tm-section-title{
+    text-align:center;
+}
+
+.flex-2-col{
+    display:flex;
+    align-items: center;
+  justify-content: center;
+}
