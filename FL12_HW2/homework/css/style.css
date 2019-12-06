@@ -16,7 +16,7 @@
 
 .tm-banner-text{
     text-shadow:2px 3px 4px #333;
-    animation: 3s linear 0s infinite move_text;
+    animation: 3s infinite move_text;
 }
 
 @keyframes move_text { from { margin-left:200px;} to {center} }
@@ -41,5 +41,11 @@
 .flex-2-col{
     display:flex;
     align-items: center;
-  justify-content: center;
+    justify-content: center;
+}
+
+.box-bg:hover{
+    box-shadow: 400px 0 0 0 lightgray inset;
+    color:lightskyblue;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
