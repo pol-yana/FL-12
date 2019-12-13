@@ -6,31 +6,6 @@
   font-family: $main-font;
 }
 
-@mixin logo {
-  padding-top: 10px;
-  display: block;
-  width: 100px;
-  height: 60px;
-
-  img {
-    margin: 5px;
-    float: left;
-    width: 30px;
-    height: 30px;
-  }
-
-  p {
-    font-weight: 20px;
-    text-align: center;
-
-    span {
-      display: block;
-
-      font-size: 10px;
-    }
-  }
-}
-
 @mixin link {
   color: white;
   font-size: 12px;
@@ -54,9 +29,27 @@ body {
       width: 490px;
 
       .landing-logo {
-        @include logo;
+        padding-top: 10px;
+        display: block;
+        width: 100px;
+        height: 60px;
+
+        img {
+          margin: 5px;
+          float: left;
+          width: 30px;
+          height: 30px;
+        }
+
         p {
+          font-weight: 20px;
+          text-align: center;
           color: $text-color;
+          span {
+            display: block;
+
+            font-size: 10px;
+          }
         }
       }
 
@@ -70,11 +63,13 @@ body {
         font-family: $main-font;
         font-weight: bold;
         width: 60%;
+        color: $text-color;
       }
 
       .header_text {
         font-size: 15px;
         font-family: $second-font;
+        color: $text-color;
       }
 
       .header_button {
@@ -95,6 +90,7 @@ body {
       font-family: $main-font;
       font-size: 25px;
       font-weight: bold;
+      color: $text-color;
     }
     .section_card_wrap {
       margin: 15px 25% 15px 25%;
@@ -135,7 +131,7 @@ body {
       right: 375px;
       height: 100px;
       width: 700px;
-      background-image: linear-gradient(to right, green, blue);
+      background-image: $gradient;
       .section_banner_text_wrap {
         float: left;
         .section_banner_heading {
@@ -163,7 +159,7 @@ body {
       color: white;
       background-color: $box-backgruond;
       .footer_logo {
-        @include logo;
+        @extend .landing-logo;
         float: left;
         margin-right: 400px;
         color: white;

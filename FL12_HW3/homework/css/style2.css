@@ -1,64 +1,135 @@
-/*
-Error: Invalid CSS after "$button-color:": expected expression (e.g. 1px, bold), was ";"
-        on line 2 of C:/Users/Yana/Documents/projects/Epam/FL-12/FL12_HW3/homework/scss/_variables2.scss
-        from line 2 of C:\Users\Yana\Documents\projects\Epam\FL-12\FL12_HW3\homework\scss\style2.scss
-
-1: $background-color:darkgrey;
-2: $button-color:;
-3: $main-img:url("../img/m-h-night.jpg");
-4: $mark-word:;
-5: $text-color:;
-6: $box-backgruond:;
-
-Backtrace:
-C:/Users/Yana/Documents/projects/Epam/FL-12/FL12_HW3/homework/scss/_variables2.scss:2
-C:\Users\Yana\Documents\projects\Epam\FL-12\FL12_HW3\homework\scss\style2.scss:2
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/lexer.rb:231:in `expected!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/parser.rb:723:in `assert_expr'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/parser.rb:68:in `parse'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1134:in `sass_script'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:642:in `variable'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:696:in `block_child'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:137:in `stylesheet'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:41:in `parse'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:321:in `to_tree'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:327:in `block in visit_import'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `block in with_import'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `with_import'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:20:in `render'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:290:in `render'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:400:in `run'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
-C:/Program Files (x86)/Koala/bin/sass:22:in `load'
-C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"$button-color:\": expected expression (e.g. 1px, bold), was \";\"\A         on line 2 of C:/Users/Yana/Documents/projects/Epam/FL-12/FL12_HW3/homework/scss/_variables2.scss\A         from line 2 of C:\Users\Yana\Documents\projects\Epam\FL-12\FL12_HW3\homework\scss\style2.scss\A \A 1: $background-color:darkgrey;\A 2: $button-color:;\A 3: $main-img:url(\"../img/m-h-night.jpg\");\A 4: $mark-word:;\A 5: $text-color:;\A 6: $box-backgruond:;"; }
+body {
+  background-color: #333333; }
+  body .header {
+    justify-content: center;
+    background-image: url("../img/m-h-night.jpg");
+    background-size: cover;
+    border-bottom-right-radius: 300px 150px; }
+    body .header .header-wrap {
+      padding-bottom: 70px;
+      margin-left: 170px;
+      margin-right: 20px;
+      height: 100%;
+      width: 490px; }
+      body .header .header-wrap .landing-logo, body .header .header-wrap .footer .footer-wrap .footer_logo, body .footer .footer-wrap .header .header-wrap .footer_logo {
+        padding-top: 10px;
+        display: block;
+        width: 100px;
+        height: 60px; }
+        body .header .header-wrap .landing-logo img, body .header .header-wrap .footer .footer-wrap .footer_logo img, body .footer .footer-wrap .header .header-wrap .footer_logo img {
+          margin: 5px;
+          float: left;
+          width: 30px;
+          height: 30px; }
+        body .header .header-wrap .landing-logo p, body .header .header-wrap .footer .footer-wrap .footer_logo p, body .footer .footer-wrap .header .header-wrap .footer_logo p {
+          font-weight: 20px;
+          text-align: center;
+          color: white; }
+          body .header .header-wrap .landing-logo p span, body .header .header-wrap .footer .footer-wrap .footer_logo p span, body .footer .footer-wrap .header .header-wrap .footer_logo p span {
+            display: block;
+            font-size: 10px; }
+      body .header .header-wrap .header_heading::fifth-child {
+        background-color: #ff6633; }
+      body .header .header-wrap .header_heading {
+        text-align: left;
+        font-size: 35px;
+        font-family: "Sourse Sans Pro", sans-serif;
+        font-weight: bold;
+        width: 60%;
+        color: white; }
+      body .header .header-wrap .header_text {
+        font-size: 15px;
+        font-family: "Hind", sans-serif;
+        color: white; }
+      body .header .header-wrap .header_button {
+        background-color: #ff9900;
+        color: white;
+        border: none;
+        font-family: "Sourse Sans Pro", sans-serif;
+        margin-bottom: 10px; }
+      body .header .header-wrap .login {
+        color: white;
+        font-size: 12px;
+        font-family: "Sourse Sans Pro", sans-serif;
+        margin: 90px; }
+  body .section {
+    margin-bottom: 70px; }
+    body .section .section_text {
+      text-align: center;
+      font-family: "Sourse Sans Pro", sans-serif;
+      font-size: 25px;
+      font-weight: bold;
+      color: white; }
+    body .section .section_card_wrap {
+      margin: 15px 25% 15px 25%; }
+      body .section .section_card_wrap .section_card {
+        height: 170px;
+        padding: 15px;
+        margin: 25px;
+        background-color: #4a4c58; }
+        body .section .section_card_wrap .section_card .section_card_img {
+          float: left;
+          height: 170px;
+          width: 250px;
+          padding-right: 40px; }
+        body .section .section_card_wrap .section_card .section_card_right_container {
+          color: white;
+          margin: 40px; }
+          body .section .section_card_wrap .section_card .section_card_right_container .section_card_heading {
+            text-align: center;
+            font-family: "Sourse Sans Pro", sans-serif;
+            font-size: 15px;
+            font-weight: bold; }
+          body .section .section_card_wrap .section_card .section_card_right_container .section_card_text {
+            font-family: "Sourse Sans Pro", sans-serif;
+            font-size: 10px; }
+          body .section .section_card_wrap .section_card .section_card_right_container .section_link {
+            color: white;
+            font-size: 12px;
+            font-family: "Sourse Sans Pro", sans-serif;
+            margin: 130px; }
+    body .section .section_banner {
+      position: absolute;
+      padding-left: 60px;
+      right: 375px;
+      height: 100px;
+      width: 700px;
+      background-image: linear-gradient(to right, #ff9900, #932e51); }
+      body .section .section_banner .section_banner_text_wrap {
+        float: left; }
+        body .section .section_banner .section_banner_text_wrap .section_banner_heading {
+          font-family: "Sourse Sans Pro", sans-serif;
+          font-weight: bold; }
+        body .section .section_banner .section_banner_text_wrap .section_banner_text {
+          color: white;
+          font-size: 10px;
+          font-family: "Sourse Sans Pro", sans-serif; }
+      body .section .section_banner .section_banner_button {
+        background-color: #ff9900;
+        color: white;
+        border: none;
+        font-family: "Sourse Sans Pro", sans-serif;
+        right: 150px;
+        position: absolute;
+        margin-bottom: 30px;
+        margin-top: 30px; }
+  body .footer .footer-wrap {
+    padding: 80px;
+    color: white;
+    background-color: #4a4c58; }
+    body .footer .footer-wrap .footer_logo {
+      float: left;
+      margin-right: 400px;
+      color: white; }
+      body .footer .footer-wrap .footer_logo p {
+        color: white; }
+    body .footer .footer-wrap .footer_text {
+      float: left;
+      font-family: "Sourse Sans Pro", sans-serif;
+      font-size: small;
+      width: 300px;
+      margin-right: 300px; }
+    body .footer .footer-wrap .footer-cr {
+      padding-top: 200px;
+      font-family: "Sourse Sans Pro", sans-serif;
+      font-size: small; }

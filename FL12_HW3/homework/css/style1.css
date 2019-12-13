@@ -11,37 +11,38 @@ body {
       margin-right: 20px;
       height: 100%;
       width: 490px; }
-      body .header .header-wrap .landing-logo {
+      body .header .header-wrap .landing-logo, body .header .header-wrap .footer .footer-wrap .footer_logo, body .footer .footer-wrap .header .header-wrap .footer_logo {
         padding-top: 10px;
         display: block;
         width: 100px;
         height: 60px; }
-        body .header .header-wrap .landing-logo img {
+        body .header .header-wrap .landing-logo img, body .header .header-wrap .footer .footer-wrap .footer_logo img, body .footer .footer-wrap .header .header-wrap .footer_logo img {
           margin: 5px;
           float: left;
           width: 30px;
           height: 30px; }
-        body .header .header-wrap .landing-logo p {
+        body .header .header-wrap .landing-logo p, body .header .header-wrap .footer .footer-wrap .footer_logo p, body .footer .footer-wrap .header .header-wrap .footer_logo p {
           font-weight: 20px;
-          text-align: center; }
-          body .header .header-wrap .landing-logo p span {
+          text-align: center;
+          color: black; }
+          body .header .header-wrap .landing-logo p span, body .header .header-wrap .footer .footer-wrap .footer_logo p span, body .footer .footer-wrap .header .header-wrap .footer_logo p span {
             display: block;
             font-size: 10px; }
-        body .header .header-wrap .landing-logo p {
-          color: black; }
       body .header .header-wrap .header_heading::fifth-child {
-        background-color: blue; }
+        background-color: #1299be; }
       body .header .header-wrap .header_heading {
         text-align: left;
         font-size: 35px;
         font-family: "Sourse Sans Pro", sans-serif;
         font-weight: bold;
-        width: 60%; }
+        width: 60%;
+        color: black; }
       body .header .header-wrap .header_text {
         font-size: 15px;
-        font-family: "Hind", sans-serif; }
+        font-family: "Hind", sans-serif;
+        color: black; }
       body .header .header-wrap .header_button {
-        background-color: green;
+        background-color: #699900;
         color: white;
         border: none;
         font-family: "Sourse Sans Pro", sans-serif;
@@ -57,7 +58,8 @@ body {
       text-align: center;
       font-family: "Sourse Sans Pro", sans-serif;
       font-size: 25px;
-      font-weight: bold; }
+      font-weight: bold;
+      color: black; }
     body .section .section_card_wrap {
       margin: 15px 25% 15px 25%; }
       body .section .section_card_wrap .section_card {
@@ -92,7 +94,7 @@ body {
       right: 375px;
       height: 100px;
       width: 700px;
-      background-image: linear-gradient(to right, green, blue); }
+      background-image: linear-gradient(to right, #699900, #2d5bd8); }
       body .section .section_banner .section_banner_text_wrap {
         float: left; }
         body .section .section_banner .section_banner_text_wrap .section_banner_heading {
@@ -103,7 +105,7 @@ body {
           font-size: 10px;
           font-family: "Sourse Sans Pro", sans-serif; }
       body .section .section_banner .section_banner_button {
-        background-color: green;
+        background-color: #699900;
         color: white;
         border: none;
         font-family: "Sourse Sans Pro", sans-serif;
@@ -116,24 +118,9 @@ body {
     color: white;
     background-color: black; }
     body .footer .footer-wrap .footer_logo {
-      padding-top: 10px;
-      display: block;
-      width: 100px;
-      height: 60px;
       float: left;
       margin-right: 400px;
       color: white; }
-      body .footer .footer-wrap .footer_logo img {
-        margin: 5px;
-        float: left;
-        width: 30px;
-        height: 30px; }
-      body .footer .footer-wrap .footer_logo p {
-        font-weight: 20px;
-        text-align: center; }
-        body .footer .footer-wrap .footer_logo p span {
-          display: block;
-          font-size: 10px; }
       body .footer .footer-wrap .footer_logo p {
         color: white; }
     body .footer .footer-wrap .footer_text {
