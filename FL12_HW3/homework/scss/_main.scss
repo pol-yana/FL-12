@@ -1,0 +1,188 @@
+// Write your styles here
+@mixin button-style {
+  background-color: $button-color;
+  color: white;
+  border: none;
+  font-family: $main-font;
+}
+
+@mixin logo {
+  padding-top: 10px;
+  display: block;
+  width: 100px;
+  height: 60px;
+
+  img {
+    margin: 5px;
+    float: left;
+    width: 30px;
+    height: 30px;
+  }
+
+  p {
+    font-weight: 20px;
+    text-align: center;
+
+    span {
+      display: block;
+
+      font-size: 10px;
+    }
+  }
+}
+
+@mixin link {
+  color: white;
+  font-size: 12px;
+  font-family: $main-font;
+}
+
+body {
+  background-color: $background-color;
+
+  .header {
+    justify-content: center;
+    background-image: $main-img;
+    background-size: cover;
+    border-bottom-right-radius: 300px 150px;
+
+    .header-wrap {
+      padding-bottom: 70px;
+      margin-left: 170px;
+      margin-right: 20px;
+      height: 100%;
+      width: 490px;
+
+      .landing-logo {
+        @include logo;
+        p {
+          color: $text-color;
+        }
+      }
+
+      .header_heading::fifth-child {
+        background-color: $mark-word;
+      }
+
+      .header_heading {
+        text-align: left;
+        font-size: 35px;
+        font-family: $main-font;
+        font-weight: bold;
+        width: 60%;
+      }
+
+      .header_text {
+        font-size: 15px;
+        font-family: $second-font;
+      }
+
+      .header_button {
+        @include button-style;
+        margin-bottom: 10px;
+      }
+
+      .login {
+        @include link;
+        margin: 90px;
+      }
+    }
+  }
+  .section {
+    margin-bottom: 70px;
+    .section_text {
+      text-align: center;
+      font-family: $main-font;
+      font-size: 25px;
+      font-weight: bold;
+    }
+    .section_card_wrap {
+      margin: 15px 25% 15px 25%;
+      .section_card {
+        height: 170px;
+        padding: 15px;
+        margin: 25px;
+        background-color: $box-backgruond;
+        .section_card_img {
+          float: left;
+          height: 170px;
+          width: 250px;
+          padding-right: 40px;
+        }
+        .section_card_right_container {
+          color: white;
+          margin: 40px;
+          .section_card_heading {
+            text-align: center;
+            font-family: $main-font;
+            font-size: 15px;
+            font-weight: bold;
+          }
+          .section_card_text {
+            font-family: $main-font;
+            font-size: 10px;
+          }
+          .section_link {
+            @include link;
+            margin: 130px;
+          }
+        }
+      }
+    }
+    .section_banner {
+      position: absolute;
+      padding-left: 60px;
+      right: 375px;
+      height: 100px;
+      width: 700px;
+      background-image: linear-gradient(to right, green, blue);
+      .section_banner_text_wrap {
+        float: left;
+        .section_banner_heading {
+          font-family: $main-font;
+          font-weight: bold;
+        }
+        .section_banner_text {
+          color: white;
+          font-size: 10px;
+          font-family: $main-font;
+        }
+      }
+      .section_banner_button {
+        @include button-style;
+        right: 150px;
+        position: absolute;
+        margin-bottom: 30px;
+        margin-top: 30px;
+      }
+    }
+  }
+  .footer {
+    .footer-wrap {
+      padding: 80px;
+      color: white;
+      background-color: $box-backgruond;
+      .footer_logo {
+        @include logo;
+        float: left;
+        margin-right: 400px;
+        color: white;
+        p {
+          color: white;
+        }
+      }
+      .footer_text {
+        float: left;
+        font-family: $main-font;
+        font-size: small;
+        width: 300px;
+        margin-right: 300px;
+      }
+      .footer-cr {
+        padding-top: 200px;
+        font-family: $main-font;
+        font-size: small;
+      }
+    }
+  }
+}
