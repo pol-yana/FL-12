@@ -13,36 +13,8 @@
 }
 
 $color:(
-  header: black;
+  header: black,
   footer: white);
-
-  .landing-logo {
-    padding-top: 10px;
-    display: block;
-    width: 100px;
-    height: 60px;
-
-    img {
-      margin: 5px;
-      float: left;
-      width: 30px;
-      height: 30px;
-    }
-
-    p {
-      font-weight: 20px;
-      text-align: center;
-      $--#{$theme}{
-        color:$color;
-      }
-      }
-      span {
-        display: block;
-        font-size: 10px;
-      }
-    }
-  }
-
 
 body {
   background-color: $background-color;
@@ -76,10 +48,9 @@ body {
         p {
           font-weight: 20px;
           text-align: center;
-          color: $text-color;
+          color: map-get($color, header);
           span {
             display: block;
-
             font-size: 10px;
           }
         }
@@ -116,13 +87,17 @@ body {
     }
   }
   .section {
+  
     margin-bottom: 70px;
+    .font-styles-css{
+      font-family:$main-font;
+      color:white;
+    }
     .section_text {
+      @extend  .font-styles-css;
       text-align: center;
-      font-family: $main-font;
       font-size: 25px;
       font-weight: bold;
-      color: $text-color;
     }
     .section_card_wrap {
       margin: 15px 25% 15px 25%;
@@ -138,16 +113,16 @@ body {
           padding-right: 40px;
         }
         .section_card_right_container {
-          color: white;
+          @extend  .font-styles-css;
           margin: 40px;
           .section_card_heading {
             text-align: center;
-            font-family: $main-font;
+            @extend  .font-styles-css;
             font-size: 15px;
             font-weight: bold;
           }
           .section_card_text {
-            font-family: $main-font;
+            @extend  .font-styles-css;
             font-size: 10px;
           }
           .section_link {
@@ -185,19 +160,40 @@ body {
       }
     }
   }
-  .footer {
+  .footer { 
+    float: left;
+    margin-right: 400px;
+    color: white;
     .footer-wrap {
       padding: 80px;
       color: white;
       background-color: $box-backgruond;
       .footer_logo {
-        @extend .landing-logo;
-        float: left;
-        margin-right: 400px;
-        color: white;
-        p {
-          color: white;
+        padding-top: 10px;
+        display: block;
+        width: 100px;
+        height: 60px;
+
+        img {
+          margin: 5px;
+          float: left;
+          width: 30px;
+          height: 30px;
         }
+
+        p {
+          font-weight: 20px;
+          text-align: center;
+          color: map-get($color, footer);
+          span {
+            display: block;
+            font-size: 10px;
+          }
+        }
+      }
+       
+       
+       
       }
       .footer_text {
         float: left;
@@ -213,4 +209,4 @@ body {
       }
     }
   }
-}
+
