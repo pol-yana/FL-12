@@ -12,6 +12,38 @@
   font-family: $main-font;
 }
 
+$color:(
+  header: black;
+  footer: white);
+
+  .landing-logo {
+    padding-top: 10px;
+    display: block;
+    width: 100px;
+    height: 60px;
+
+    img {
+      margin: 5px;
+      float: left;
+      width: 30px;
+      height: 30px;
+    }
+
+    p {
+      font-weight: 20px;
+      text-align: center;
+      $--#{$theme}{
+        color:$color;
+      }
+      }
+      span {
+        display: block;
+        font-size: 10px;
+      }
+    }
+  }
+
+
 body {
   background-color: $background-color;
 
@@ -53,7 +85,7 @@ body {
         }
       }
 
-      .header_heading::fifth-child {
+      .header_heading::fifth-child::nth-word(5) {
         background-color: $mark-word;
       }
 
