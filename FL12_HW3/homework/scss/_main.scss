@@ -12,9 +12,10 @@
   font-family: $main-font;
 }
 
-$color:(
-  header: black,
-  footer: white);
+$color: (
+  header: $text-color,
+  footer: white
+);
 
 body {
   background-color: $background-color;
@@ -46,18 +47,15 @@ body {
         }
 
         p {
-          font-weight: 20px;
+          font-weight: normal;
           text-align: center;
           color: map-get($color, header);
+
           span {
             display: block;
             font-size: 10px;
           }
         }
-      }
-
-      .header_heading::fifth-child::nth-word(5) {
-        background-color: $mark-word;
       }
 
       .header_heading {
@@ -86,45 +84,54 @@ body {
       }
     }
   }
+
   .section {
-  
     margin-bottom: 70px;
-    .font-styles-css{
-      font-family:$main-font;
-      color:white;
+
+    .font-styles-css {
+      font-family: $main-font;
+      color: white;
     }
+
     .section_text {
-      @extend  .font-styles-css;
+      @extend .font-styles-css;
       text-align: center;
       font-size: 25px;
       font-weight: bold;
     }
+
     .section_card_wrap {
       margin: 15px 25% 15px 25%;
+
       .section_card {
         height: 170px;
         padding: 15px;
         margin: 25px;
         background-color: $box-backgruond;
+
         .section_card_img {
           float: left;
           height: 170px;
           width: 250px;
           padding-right: 40px;
         }
+
         .section_card_right_container {
-          @extend  .font-styles-css;
+          @extend .font-styles-css;
           margin: 40px;
+
           .section_card_heading {
             text-align: center;
-            @extend  .font-styles-css;
+            @extend .font-styles-css;
             font-size: 15px;
             font-weight: bold;
           }
+
           .section_card_text {
-            @extend  .font-styles-css;
+            @extend .font-styles-css;
             font-size: 10px;
           }
+
           .section_link {
             @include link;
             margin: 130px;
@@ -132,6 +139,7 @@ body {
         }
       }
     }
+
     .section_banner {
       position: absolute;
       padding-left: 60px;
@@ -139,18 +147,22 @@ body {
       height: 100px;
       width: 700px;
       background-image: $gradient;
+
       .section_banner_text_wrap {
         float: left;
+
         .section_banner_heading {
           font-family: $main-font;
           font-weight: bold;
         }
+
         .section_banner_text {
           color: white;
           font-size: 10px;
           font-family: $main-font;
         }
       }
+
       .section_banner_button {
         @include button-style;
         right: 150px;
@@ -160,14 +172,15 @@ body {
       }
     }
   }
-  .footer { 
-    float: left;
-    margin-right: 400px;
-    color: white;
+
+  .footer {
     .footer-wrap {
       padding: 80px;
       color: white;
       background-color: $box-backgruond;
+      display: flex;
+      flex-direction: row;
+
       .footer_logo {
         padding-top: 10px;
         display: block;
@@ -182,31 +195,30 @@ body {
         }
 
         p {
-          font-weight: 20px;
+          font-weight: normal;
           text-align: center;
           color: map-get($color, footer);
+
           span {
             display: block;
             font-size: 10px;
           }
         }
       }
-       
-       
-       
-      }
-      .footer_text {
-        float: left;
-        font-family: $main-font;
-        font-size: small;
-        width: 300px;
-        margin-right: 300px;
-      }
-      .footer-cr {
-        padding-top: 200px;
-        font-family: $main-font;
-        font-size: small;
-      }
+    }
+
+    .footer_text {
+      font-family: $main-font;
+      font-size: small;
+      width: 300px;
+      margin-left: 300px;
+    }
+
+    .footer-cr {
+      padding-top: 10px;
+      padding-left: 400px;
+      font-family: $main-font;
+      font-size: small;
     }
   }
-
+}
