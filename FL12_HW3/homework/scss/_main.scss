@@ -94,7 +94,8 @@ body {
     }
 
     .section_text {
-      @extend .font-styles-css;
+      color: $text-color;
+      font-family: $main-font;
       text-align: center;
       font-size: 25px;
       font-weight: bold;
