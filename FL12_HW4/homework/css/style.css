@@ -5,15 +5,17 @@
   width: 100%;
   background-color: #ffffff; }
   .container-header .navigation .nav-name {
-    margin: 5px 80px; }
+    margin: 0% 10% 0% 15%;
+    width: 20%; }
     .container-header .navigation .nav-name p {
-      margin: 20px 200px;
       font-weight: bold;
       color: #000; }
   .container-header .navigation .nav-links {
-    margin: 25px 100px; }
+    margin: 0% 15% 0% 10%;
+    padding-top: 1%;
+    width: 40%; }
     .container-header .navigation .nav-links a {
-      margin: 0px 40px;
+      margin: 35% 5%;
       color: #777;
       text-decoration: none; }
     .container-header .navigation .nav-links a:hover {
@@ -23,8 +25,9 @@
   flex-direction: column;
   justify-content: center;
   background-image: url(../img/home-bg.jpg);
-  width: 1500px;
-  height: 900px; }
+  background-size: cover;
+  width: 100%;
+  height: 100%; }
   .container-header .hello-box p {
     color: #ffffff;
     text-align: center;
@@ -40,7 +43,7 @@
     height: 30px;
     margin: 0 auto;
     color: #000;
-    font-size: bold;
+    font-weight: bold;
     background-color: #ffffff; }
 
 .container {
@@ -84,7 +87,7 @@
   padding: 10px 300px; }
   .footer .company {
     float: left;
-    margin: 0 100px 0 0;
+    margin: 0 25% 0 0;
     width: 40%; }
     .footer .company p {
       color: #777; }
