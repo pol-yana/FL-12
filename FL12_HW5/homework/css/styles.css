@@ -31,7 +31,7 @@ body {
 
 /* Your styles go here */
 body {
-  margin:0;
+  margin: 0;
   background-color: var(--bg-color--dark);
 }
 .nav {
@@ -40,39 +40,99 @@ body {
   justify-content: space-between;
   background-color: var(--bg-color--header);
 }
-.nav-name{
+.nav-name {
   color: var(--link);
-  margin:0 5%;  
+  margin: 0 5%;
 }
-.nav-name span{
-  color:#9d27b0;
+.nav-name span {
+  color: #9d27b0;
 }
-.container-links{
+.container-links {
   width: 30%;
-  margin:0 2%;
+  margin: 0 2%;
 }
-.nav-links{
+.nav-links {
   display: flex;
   flex-direction: row;
-  color:var(--link);
+  color: var(--link);
   height: 100%;
 }
-.link{
-  margin:0 0 0 10%;
+.link {
+  margin: 0 0 0 10%;
   padding: 5% 2% 2% 2%;
 }
-.link:hover{
-background-color: var(--link--hover);
+.link:hover {
+  background-color: var(--link--hover);
 }
-.header-image{
+.header-image {
   background-image: url(../img/post0.jpg);
   background-size: cover;
-  height:500px;
-  color:var(--link);
-  padding:2%;
+  height: 500px;
+  color: var(--link);
+  padding: 2%;
 }
-.header-text{
- width: 60%;
- height:40%;
- bottom:2%;
+.header-text {
+  width: 60%;
+  height: 40%;
+  bottom: 2%;
+}
+.container-main {
+  width: 70%;
+  margin: 1% 1% 1% 0;
+}
+.post {
+  display: flex;
+}
+.post:nth-child(2n + 1) {
+  flex-direction: row;
+}
+.post:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+.post-image {
+  width: 54.5%;
+}
+.post-image img {
+  width: 100%;
+  height: 100%;
+}
+.post-text {
+  width: 50%;
+  padding: 2%;
+  color: var(--link);
+}
+.post-text:nth-child(2n + 1) {
+  text-align: right;
+}
+.post-text:nth-child(2n) {
+  text-align: left;
+}
+.date {
+  width: 10%;
+  height: 10%;
+  color: #fff;
+}
+.date:nth-child(2n-1) {
+  float: right;
+}
+.date:nth-child(2n) {
+  float: left;
+}
+.date p {
+  margin: 0 auto;
+  font-size: 30px;
+  font-weight: bold;
+}
+.date span {
+  font-size: 20px;
+}
+.post-text h4 {
+  font-size: 260%;
+}
+.last-post {
+  padding: 2%;
+  color: var(--link);
+}
+.last-post h4 {
+  font-size: 260%;
 }
