@@ -160,3 +160,10 @@ body {
 .new p{
   margin: 5%;
 }
+.footer{
+  display: flex;
+  background-color: var(--bg-footer-color);
+  color:var(--link);
+  justify-content: space-between;
+  padding: 2% 5%;
+}
