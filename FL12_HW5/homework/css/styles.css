@@ -74,7 +74,13 @@ body {
 .header-text {
   width: 60%;
   height: 40%;
-  bottom: 2%;
+  margin-top: 20%;
+}
+.header-text h4 {
+  font-size: 260%;
+}
+.main {
+  display: flex;
 }
 .container-main {
   width: 70%;
@@ -135,4 +141,22 @@ body {
 }
 .last-post h4 {
   font-size: 260%;
+}
+.container-news {
+  width: 28%;
+}
+.new {
+  background-color: var(--link);
+  margin: 4% 0 0 0;
+  padding-bottom:5%;
+}
+.new img {
+  width: 100%;
+}
+.new h4 {
+  font-size: 260%;
+  margin: 5%;
+}
+.new p{
+  margin: 5%;
 }
