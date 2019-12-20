@@ -30,6 +30,22 @@ body {
 }
 
 /* Your styles go here */
+.post-1:hover {
+  background: rgba(157, 39, 176, 0.5);
+}
+.post-2 {
+  background: #9bb800;
+}
+.post-3 {
+  background: #ed5120;
+}
+.post-4 {
+  background: #9d27b0;
+}
+.post-5 {
+  background: #2d95bb;
+}
+
 body {
   margin: 0;
   background-color: var(--bg-color--dark);
@@ -88,9 +104,6 @@ body {
 }
 .post {
   display: flex;
-}
-.post:hover{
-  background-color: rgba(250, 245, 245, 0.5);
 }
 .post:nth-child(2n + 1) {
   flex-direction: row;
@@ -182,6 +195,11 @@ body {
     display: flex;
     flex-direction: column; 
   }
+  .header-text {
+    width: 95%;
+    height: 40%;
+    margin-top: 40%;
+  }
   .link {
     width: 20px;
     height: 0.1px;
@@ -189,15 +207,80 @@ body {
     background-color: var(--link);
     color: var(--bg-color--header);
   }
-  .post{
-    display: flex;
+  .post:nth-child(2n + 1) {
+    flex-direction:column;
+  }
+  .post:nth-child(2n) {
     flex-direction: column;
+  }
+  .post-image {
+    width: 100%;
+  }
+  .post-text {
+    width: 97%;
   }
   .date{
     float: right;
   }
   .footer{
-    display: inline;
+    display: block;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .nav {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    justify-content: center; 
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: column; 
+  }
+  .header-text {
+    width: 95%;
+    height: 40%;
+    margin-top: 60%;
+  }
+  .link {
+    width: 20px;
+    height: 0.1px;
+    margin: 0 auto;
+    background-color: var(--link);
+    color: var(--bg-color--header);
+  }
+  .container-main{
+      width:100%;
+      margin: 0;
+  }
+  .main{
+    display: flex;
+    flex-direction: column;
+  }
+  .post:nth-child(2n + 1) {
+    flex-direction:column;
+  }
+  .post:nth-child(2n) {
+    flex-direction: column;
+  }
+  .post-image {
+    width: 100%;
+  }
+  .post-text {
+    width: 97%;
+  }
+  .date{
+    float: right;
+  }
+  .container-news {
+    width:100%;
+  }
+  .new{
+    margin:0;
+  }
+  .footer{
+    display: block;
     text-align: center;
   }
 }
