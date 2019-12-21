@@ -30,22 +30,6 @@ body {
 }
 
 /* Your styles go here */
-.post-1:hover {
-  background: rgba(157, 39, 176, 0.5);
-}
-.post-2 {
-  background: #9bb800;
-}
-.post-3 {
-  background: #ed5120;
-}
-.post-4 {
-  background: #9d27b0;
-}
-.post-5 {
-  background: #2d95bb;
-}
-
 body {
   margin: 0;
   background-color: var(--bg-color--dark);
@@ -105,6 +89,9 @@ body {
 .post {
   display: flex;
 }
+.post:hover {
+  opacity: 0.5;
+}
 .post:nth-child(2n + 1) {
   flex-direction: row;
 }
@@ -123,21 +110,21 @@ body {
   padding: 2%;
   color: var(--link);
 }
-.post-text:nth-child(2n + 1) {
-  text-align: right;
-}
-.post-text:nth-child(2n) {
+.post-right {
   text-align: left;
+}
+.post-left {
+  text-align: right;
 }
 .date {
   width: 10%;
   height: 10%;
   color: rgba(245, 243, 243, 0.5);
 }
-.date:nth-child(2n-1) {
+.post-right .date {
   float: right;
 }
-.date:nth-child(2n) {
+.post-left .date {
   float: left;
 }
 .date p {
@@ -154,6 +141,9 @@ body {
 .last-post {
   padding: 2%;
   color: var(--link);
+}
+.last-post:hover {
+  opacity: 0.5;
 }
 .last-post h4 {
   font-size: 260%;
@@ -189,11 +179,11 @@ body {
     display: flex;
     flex-direction: column-reverse;
     text-align: center;
-    justify-content: center; 
+    justify-content: center;
   }
   .nav-links {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
   }
   .header-text {
     width: 95%;
@@ -208,7 +198,7 @@ body {
     color: var(--bg-color--header);
   }
   .post:nth-child(2n + 1) {
-    flex-direction:column;
+    flex-direction: column;
   }
   .post:nth-child(2n) {
     flex-direction: column;
@@ -219,10 +209,15 @@ body {
   .post-text {
     width: 97%;
   }
-  .date{
+  .post-right .date,
+  .post-left .date {
     float: right;
   }
-  .footer{
+  .post-right,
+  .post-left {
+    text-align: left;
+  }
+  .footer {
     display: block;
     text-align: center;
   }
@@ -232,11 +227,11 @@ body {
     display: flex;
     flex-direction: column-reverse;
     text-align: center;
-    justify-content: center; 
+    justify-content: center;
   }
   .nav-links {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
   }
   .header-text {
     width: 95%;
@@ -250,16 +245,16 @@ body {
     background-color: var(--link);
     color: var(--bg-color--header);
   }
-  .container-main{
-      width:100%;
-      margin: 0;
+  .container-main {
+    width: 100%;
+    margin: 0;
   }
-  .main{
+  .main {
     display: flex;
     flex-direction: column;
   }
   .post:nth-child(2n + 1) {
-    flex-direction:column;
+    flex-direction: column;
   }
   .post:nth-child(2n) {
     flex-direction: column;
@@ -270,16 +265,21 @@ body {
   .post-text {
     width: 97%;
   }
-  .date{
+  .post-right .date,
+  .post-left .date {
     float: right;
   }
+  .post-right,
+  .post-left {
+    text-align: left;
+  }
   .container-news {
-    width:100%;
+    width: 100%;
   }
-  .new{
-    margin:0;
+  .new {
+    margin: 0;
   }
-  .footer{
+  .footer {
     display: block;
     text-align: center;
   }
