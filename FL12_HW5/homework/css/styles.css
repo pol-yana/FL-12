@@ -1,8 +1,3 @@
-/*
- * Feel free to change name of colors if you need it
- * Feel free to add new colors if you need it
- */
-
 body {
   font-family: roboto;
 }
@@ -21,8 +16,6 @@ body {
 .post-5 {
   background: #2d95bb;
 }
-
-/* Your styles go here */
 body {
   margin: 0;
   background-color:#0b182d;
@@ -47,13 +40,18 @@ body {
 .nav-links {
   display: flex;
   flex-direction: row;
-  color:#ffffff;
+  color:#fff;
   height: 100%;
+}
+a{
+  color:#fff;
+  text-decoration: none;
 }
 .link {
   margin: 0 0 0 10%;
   padding: 5% 2% 2% 2%;
 }
+.nav-name:hover,
 .link:hover {
   background-color:#1f52a4;
 }
@@ -82,8 +80,24 @@ body {
 .post {
   display: flex;
 }
-.post:hover {
+.post-text:hover h4{
   opacity: 0.5;
+}
+.post-1 .post-image:hover{
+  opacity:0.5;
+  color:#9d27b0;
+}
+.post-2 .post-image:hover{
+  opacity:0.5;
+  color:#9bb800;
+}
+.post-3 .post-image:hover{
+  opacity:0.5;
+  color:#ed5120;
+}
+.post-4 .post-image:hover{
+  opacity:0.5;
+  color: #9d27b0;
 }
 .post:nth-child(2n + 1) {
   flex-direction: row;
@@ -131,10 +145,10 @@ body {
   padding: 2%;
   color: #ffffff;
 }
-.last-post .date {
+.last-post .date{
  float: right;
 }
-.last-post:hover {
+.last-post:hover h4 {
   opacity: 0.5;
 }
 .last-post h4 {
@@ -194,6 +208,8 @@ body {
     width: 35px;
     height: 2px;
     background-color: white;
+  }
+  a{
     color: #024161;
   }
   .second,
