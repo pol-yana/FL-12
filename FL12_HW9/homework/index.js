@@ -104,6 +104,12 @@ function formatDate(date) {
   let year = todayTime.getFullYear();
   let hour = todayTime.getHours();
   let minute = todayTime.getMinutes();
+  if (hour<10){
+     hour= "0"+hour;
+  }
+  if (minute<10){
+     minute = "0"+minute;
+  }
   return year + '/' + month + '/' + day + ' ' + hour + ':' + minute;
 }
-formatDate(new Date('6/15/2018 09:15:00'));
+formatDate(new Date());
