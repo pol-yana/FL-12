@@ -2,8 +2,8 @@
 //task1
 function convert(...args) {
   let arr = [];
-  for (var i = 0; i < args.length; i++) {
-    if (typeof args[i] === "string") {
+  for (let i = 0; i < args.length; i++) {
+    if (typeof args[i] === 'string') {
       arr.push(parseInt(args[i]));
     } else {
       arr.push(args[i].toString());
@@ -11,7 +11,7 @@ function convert(...args) {
   }
   return arr;
 }
-convert("1", 2, 3, "4");
+convert('1', 2, 3, '4');
 
 //task2
 function executeforEach(arr, func) {
@@ -24,23 +24,21 @@ executeforEach([1, 2, 3], function(el) {
 //task3
 function mapArray(arr, func) {
   let result = [];
-  for (var i = 0; i < arr.length; i++) {
-    if (typeof arr[i] === "string") {
-      result.push(func(Number(arr[i])));
-    } else {
-      result.push(func(arr[i]));
-    }
-  }
+  executeforEach(arr, el =>
+    typeof el === 'string'
+      ? result.push(func(Number(el)))
+      : result.push(func(el))
+  );
   return result;
 }
-mapArray([2, "5", 8], function(el) {
+mapArray([2, '5', 8], function(el) {
   return el + 3;
 });
 
 //task4
-function filterArray(arr, callback) {
+function filterArray(arr, func) {
   let filteredArr = [];
-  executeforEach(arr, elem => callback(elem) ? filteredArr.push(elem) : "");
+  executeforEach(arr, elem => func(elem) ? filteredArr.push(elem) : '');
   return filteredArr;
 }
 filterArray([2, 5, 8], function(el) {
@@ -50,16 +48,16 @@ filterArray([2, 5, 8], function(el) {
 //task5
 function flipOver(str) {
   return str
-    .split("")
+    .split('')
     .reverse()
-    .join("");
+    .join('');
 }
-flipOver("hey world");
+flipOver('hey world');
 
 //task6
 function makeListFromRange(arr) {
-  var n = arr[0];
-  var result = [];
+  let n = arr[0];
+  let result = [];
   while (n <= arr[1]) {
     result.push(n);
     n++;
@@ -70,8 +68,8 @@ makeListFromRange([2, 7]);
 
 //task7
 const actors = [
-  { name: "tommy", age: 36 },
-  { name: "lee", age: 28 }
+  { name: 'tommy', age: 36 },
+  { name: 'lee', age: 28 }
 ];
 
 function getArrayOfKeys(arr, key) {
@@ -81,18 +79,14 @@ function getArrayOfKeys(arr, key) {
   });
   return arrOfKeys;
 }
-getArrayOfKeys(actors, "name");
+getArrayOfKeys(actors, 'name');
 
 //task8
 function substitute(arr) {
-  var result = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] >= 30) {
-      result.push(arr[i]);
-    } else {
-      result.push("*");
-    }
-  }
+  let result = [];
+
+  mapArray(arr, el => el >= 30 ? result.push(el) : result.push('*'));
+
   return result;
 }
 substitute([58, 14, 48, 2, 31, 29]);
@@ -100,12 +94,18 @@ substitute([58, 14, 48, 2, 31, 29]);
 //task9
 const date = new Date(2019, 0, 2);
 function getPastDay(date, n) {
-  return (Date.parse(date) - n * 24 * 60 * 60 * 1000)
-    .toISOString()
-    .getDate();
+  return (Date.parse(date) - n * 24 * 60 * 60 * 1000).toISOString().getDate();
 }
 getPastDay(date, 1); // 1,
 
 //task10
-//function formatDate() {}
-// formatDate(new Date("6/15/2018 09:15:00"));
+function formatDate(date) {
+  let todayTime = new Date(date);
+  let month = todayTime.getMonth() + 1;
+  let day = todayTime.getDate();
+  let year = todayTime.getFullYear();
+  let hour = todayTime.getHours();
+  let minute = todayTime.getMinutes();
+  return year + '/' + month + '/' + day + ' ' + hour + ':' + minute;
+}
+formatDate(new Date('6/15/2018 09:15:00'));
