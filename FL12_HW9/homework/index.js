@@ -84,17 +84,15 @@ getArrayOfKeys(actors, 'name');
 //task8
 function substitute(arr) {
   let result = [];
-
   mapArray(arr, el => el >= 30 ? result.push(el) : result.push('*'));
-
   return result;
 }
 substitute([58, 14, 48, 2, 31, 29]);
 
 //task9
-const date = new Date(2019, 0, 2);
+var date = new Date(2019, 0, 2);
 function getPastDay(date, n) {
-  return (Date.parse(date) - n * 24 * 60 * 60 * 1000).toISOString().getDate();
+  return new Date(date.setDate(date.getDate() - n)).getDate();
 }
 getPastDay(date, 1); // 1,
 
