@@ -5,31 +5,38 @@ function Fighter(obj) {
   this.hp = obj.hp;
   this.strength = obj.strength;
   this.agility = obj.agility;
-  this.win=0;
-  this.loss=0;
+  this.win = 0;
+  this.loss = 0;
 
   this.getName = function() {
-    return "Name : " + this.name;
+    return this.name;
   };
 
   this.getDamage = function() {
-    return "Damage: " + this.damage;
+    return this.damage;
   };
 
   this.getStrength = function() {
-    return "Strength: " + this.strength;
+    return this.strength;
   };
 
   this.getAgility = function() {
-    return "Agility: " + this.agility;
+    return this.agility;
   };
 
   this.getHealth = function() {
-    return "Health: " + this.hp;
+    return this.hp;
   };
 
   this.logCombatHistory = function() {
-    return "Name:" + this.name + ", Wins:" + this.win + ", Losses:" + this.loss;
+    return (
+      "Name:" +
+      this.getName(name) +
+      ", Wins:" +
+      this.win +
+      ", Losses:" +
+      this.loss
+    );
   };
 
   this.health = function(n) {
