@@ -28,6 +28,17 @@ function Fighter(obj) {
     return this.hp;
   };
 
+  this.attack = function(fighter) {
+    let probability = 1 / (fighter.getStrength() + fighter.agility());
+    let rand = Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0) + 1));
+    if (probability > rand) {
+      fighter.hp = fighter.hp - this.damage;
+      return this.name() + "makes" + this.damage() + "to" + fighter.name();
+    } else {
+      return this.name() + "attack missed";
+    }
+  };
+
   this.logCombatHistory = function() {
     return (
       "Name:" +
@@ -39,7 +50,7 @@ function Fighter(obj) {
     );
   };
 
-  this.health = function(n) {
+  this.heal= function(n) {
     this.hp + n <= 100 ? (this.hp = this.hp + n) : (this.hp = 100);
   };
 
