@@ -32,7 +32,7 @@ function Fighter(obj) {
     let probability = 100 - (fighter.getStrength() + fighter.getAgility());
     let rand = Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0) + 1));
     if (probability > rand) {
-      fighter.hp = fighter.hp - this.getDamage;
+      fighter.hp = fighter.hp - this.getDamage();
       console.log(
         this.getName() +
           " makes " +
