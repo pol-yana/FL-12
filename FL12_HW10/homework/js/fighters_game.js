@@ -35,28 +35,28 @@ function Fighter(obj) {
       fighter.hp = fighter.hp - this.getDamage();
       console.log(
         this.getName() +
-          " makes " +
+          ' makes ' +
           this.getDamage() +
-          " to " +
+          ' to ' +
           fighter.getName()
       );
     } else {
-      console.log(this.getName() + " attack missed");
+      console.log(this.getName() + ' attack missed');
     }
   };
 
   this.logCombatHistory = function() {
     console.log(
-      "Name: " + this.getName() + ", Wins:" + this.win + ", Losses:" + this.loss
+      'Name: ' + this.getName() + ', Wins:' + this.win + ', Losses:' + this.loss
     );
   };
 
   this.heal = function(n) {
-    this.hp + n <= 100 ? (this.hp = this.hp + n) : (this.hp = 100);
+    this.hp + n <= 100 ? this.hp = this.hp + n : this.hp = 100;
   };
 
   this.dealDamage = function(n) {
-    this.hp - n > 0 ? (this.hp = this.hp - n) : (this.hp = 0);
+    this.hp - n > 0 ? this.hp = this.hp - n : this.hp = 0;
   };
 
   this.addWin = function() {
@@ -70,9 +70,9 @@ function Fighter(obj) {
 
 function battle(fighter1, fighter2) {
   if (fighter1.getHealth() === 0) {
-    console.log(fighter1.getName() + " is dead and can`t fight");
+    console.log(fighter1.getName() + ' is dead and can`t fight');
   } else if (fighter2.getHealth() === 0) {
-    console.log(fighter1.getName() + " is dead and can`t fight");
+    console.log(fighter1.getName() + ' is dead and can`t fight');
   } else {
     while (fighter1.getHealth() > 0 && fighter2.getHealth() > 0) {
       fighter1.attack(fighter2);
@@ -84,11 +84,11 @@ function battle(fighter1, fighter2) {
     if (fighter1.getHealth() === 0) {
       fighter1.addLoss();
       fighter2.addWin();
-      console.log(fighter2.getName() + " has won!");
+      console.log(fighter2.getName() + ' has won!');
     } else {
       fighter1.addWin();
       fighter2.addLoss();
-      console.log(fighter1.getName() + " has won!");
+      console.log(fighter1.getName() + ' has won!');
     }
   }
 }
