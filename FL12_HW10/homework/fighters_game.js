@@ -29,24 +29,25 @@ function Fighter(obj) {
   };
 
   this.attack = function(fighter) {
-    let probability = 1 / (fighter.getStrength() + fighter.agility());
+    let probability = 100 - (fighter.getStrength() + fighter.getAgility());
     let rand = Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0) + 1));
     if (probability > rand) {
-      fighter.hp = fighter.hp - this.damage;
-      return this.name() + "makes" + this.damage() + "to" + fighter.name();
+      fighter.hp = fighter.hp - this.getDamage;
+      console.log(
+        this.getName() +
+          " makes " +
+          this.getDamage() +
+          " to " +
+          fighter.getName()
+      );
     } else {
-      return this.name() + "attack missed";
+      console.log(this.getName() + " attack missed");
     }
   };
 
   this.logCombatHistory = function() {
-    return (
-      "Name:" +
-      this.getName(name) +
-      ", Wins:" +
-      this.win +
-      ", Losses:" +
-      this.loss
+    console.log(
+      "Name: " + this.getName() + ", Wins:" + this.win + ", Losses:" + this.loss
     );
   };
 
@@ -69,23 +70,25 @@ function Fighter(obj) {
 
 function battle(fighter1, fighter2) {
   if (fighter1.getHealth() === 0) {
-    return fighter1.getName() + "is dead and can`t fight";
+    console.log(fighter1.getName() + " is dead and can`t fight");
   } else if (fighter2.getHealth() === 0) {
-    return fighter1.getName() + "is dead and can`t fight";
+    console.log(fighter1.getName() + " is dead and can`t fight");
   } else {
-    while (fighter1.getHealth() > 0 && fighter1.getHealth() > 0) {
-      fighter1.attack();
-      fighter2.attack();
+    while (fighter1.getHealth() > 0 && fighter2.getHealth() > 0) {
+      fighter1.attack(fighter2);
+      if (fighter2.getHealth > 0) {
+        fighter2.attack(fighter1);
+      }
     }
 
     if (fighter1.getHealth() === 0) {
       fighter1.addLoss();
       fighter2.addWin();
-      return fighter2.getName() + "has won!";
+      console.log(fighter2.getName() + " has won!");
     } else {
       fighter1.addWin();
       fighter2.addLoss();
-      return fighter1.getName() + "has won!";
+      console.log(fighter1.getName() + " has won!");
     }
   }
 }
