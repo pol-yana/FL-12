@@ -50,7 +50,7 @@ function Fighter(obj) {
     );
   };
 
-  this.heal= function(n) {
+  this.heal = function(n) {
     this.hp + n <= 100 ? (this.hp = this.hp + n) : (this.hp = 100);
   };
 
@@ -65,4 +65,27 @@ function Fighter(obj) {
   this.addLoss = function() {
     this.loss++;
   };
+}
+
+function battle(fighter1, fighter2) {
+  if (fighter1.getHealth() === 0) {
+    return fighter1.getName() + "is dead and can`t fight";
+  } else if (fighter2.getHealth() === 0) {
+    return fighter1.getName() + "is dead and can`t fight";
+  } else {
+    while (fighter1.getHealth() > 0 && fighter1.getHealth() > 0) {
+      fighter1.attack();
+      fighter2.attack();
+    }
+
+    if (fighter1.getHealth() === 0) {
+      fighter1.addLoss();
+      fighter2.addWin();
+      return fighter2.getName() + "has won!";
+    } else {
+      fighter1.addWin();
+      fighter2.addLoss();
+      return fighter1.getName() + "has won!";
+    }
+  }
 }
