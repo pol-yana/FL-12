@@ -1,1 +1,47 @@
 /* Todo: your styles go here*/
+
+ul, #root {
+    list-style-type: none;
+  }
+  
+  #root {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .caret {
+    cursor: pointer;
+    user-select: none; 
+  }
+  
+  .caret::before {
+    content: "folder";
+    font-family: 'Material Icons';
+    color: rgb(236, 164, 6);
+    display: inline-block;
+    margin-right: 6px;
+  }
+  
+  .caret-down::before {
+    content: "folder_open";
+    font-family: 'Material Icons';
+    color: rgb(236, 164, 6);
+    display: inline-block;
+    margin-right: 6px;
+  }
+
+  .file::before {
+    content: "insert_drive_file";
+    font-family: 'Material Icons';
+    color: rgb(184, 183, 180);
+    display: inline-block;
+    margin-right: 6px;
+  }
+  
+  .nested {
+    display: none;
+  }
+  
+  .active {
+    display: block;
+  }
