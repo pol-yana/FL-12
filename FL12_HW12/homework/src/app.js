@@ -9,6 +9,8 @@ var btnAddNew = document.createElement('button');
 btnAddNew.innerHTML = 'Add new';
 root.appendChild(btnAddNew);
 
+getAllKeyValueFromLocalStorage();
+
 btnAddNew.addEventListener('click', function() {
   if (!document.getElementById('id-form')) {
     let createForm = document.createElement('div');
@@ -58,9 +60,12 @@ btnAddNew.addEventListener('click', function() {
   }
 });
 
-function buttonEdit() {
+function buttonEdit(key, value) {
   let btnEdit = document.createElement('button');
   btnEdit.innerHTML = 'Edit';
+  btnEdit.addEventListener('click', function() {
+    editInLocalStorage(key, value);
+  });
   return btnEdit;
 }
 
@@ -79,24 +84,12 @@ function buttonDelete(key) {
 function addToLocalStorage(key, value) {
   localStorage.setItem(key, value);
 }
-// todo: edit in localStorage
-function editInLocalStorage(event) {
+
+function editInLocalStorage(key, value) {
   let createForm = document.createElement('div');
 
   createForm.setAttribute('id', 'id-form');
   root.appendChild(createForm);
-
-  let keyLabel = document.createElement('label');
-  keyLabel.innerHTML = 'Key:';
-  createForm.appendChild(keyLabel);
-
-  let keyInput = document.createElement('input');
-  keyInput.setAttribute('type', 'text');
-  keyInput.setAttribute('name', 'dkey');
-  createForm.appendChild(keyInput);
-
-  let linebreak1 = document.createElement('br');
-  createForm.appendChild(linebreak1);
 
   let valueLabel = document.createElement('label');
   valueLabel.innerHTML = 'Value:';
@@ -112,18 +105,14 @@ function editInLocalStorage(event) {
 
   let submit = document.createElement('button');
 
-  submit.innerHTML = 'SAVE';
+  submit.innerHTML = 'Update';
   createForm.appendChild(submit);
 
   submit.onclick = function() {
-    window.location.hash = '#/add';
-    addToLocalStorage(keyInput.value, valueInput.value);
+    value = valueInput.value;
+    rewriteLocalStorage(key, value);
     getAllKeyValueFromLocalStorage();
   };
-}
-
-function removeFromLocalStorage(even) {
-  localStorage.removeItem(even);
 }
 
 function getAllKeyValueFromLocalStorage() {
@@ -141,4 +130,8 @@ function showKeyValueInHtml(i, key, value) {
   showKey.appendChild(buttonDelete(key));
   showKey.appendChild(buttonEdit(key, value));
   list.appendChild(showKey);
+}
+
+function rewriteLocalStorage(key, value) {
+  localStorage.setItem(key, value);
 }
